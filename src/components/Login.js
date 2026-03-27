@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BG_IMG } from "../utils/util";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -51,6 +52,7 @@ const Login = () => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        updateUser(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -76,7 +78,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/7ea4545e-42d3-4ebf-82fd-0e1984dc6375/web/IN-en-20260316-TRIFECTA-perspective_789c5633-3949-4708-8e6c-8ddfd22ed696_large.jpg" alt="background-image" />
+        <img src={BG_IMG} alt="background-image" />
       </div>
       <form
         onSubmit={(e) => {

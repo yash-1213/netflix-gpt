@@ -14,6 +14,7 @@
 - Implement SignIn/SignUp user Api
 - Created Redux store with userSlice
 - Implement SignOut user Api
+- Unsubscribed to the onAuthStateChanged callback
 
 # Features
 
