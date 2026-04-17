@@ -17,9 +17,12 @@ export const NOW_PLAYING_MOVIES_URL = "https://api.themoviedb.org/3/movie/now_pl
 export const POPULAR_MOVIES_URL = "https://api.themoviedb.org/3/movie/popular?page=1";
 export const TOP_RATED_MOVIES_URL = "https://api.themoviedb.org/3/movie/top_rated?page=1";
 export const UPCOMING_MOVIES_URL = "https://api.themoviedb.org/3/movie/upcoming?page=1";
+export const SEARCH_MOVIE_URL = "https://api.themoviedb.org/3/search/movie?query=";
 
 export const SUPPORTED_LANGUAGES = [
   { identifier: "en", name: "English" },
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const OPEN_AI_KEY = "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";
