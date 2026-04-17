@@ -25,4 +25,5 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const OPEN_AI_KEY = "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";
+// export const OPEN_AI_KEY = "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";
+export const OPEN_AI_KEY = "";
