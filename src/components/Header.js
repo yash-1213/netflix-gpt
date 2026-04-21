@@ -30,10 +30,10 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute w-full px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between items-center">
+    <div className="bg-black md:bg-transparent flex-col absolute w-full px-8 py-2 md:bg-gradient-to-b md:from-black z-10 flex justify-between items-center md:flex-row">
       <img className="w-44" src={LOGO} alt="logo" />
       {user && (
-        <div className="flex items-center">
+        <div className="w-full md:w-auto flex items-center justify-between">
           {isGptSearchVisible && (
             <select className="py-2 px-4 rounded-md m-2" onChange={handleLanguageChange}>
               {SUPPORTED_LANGUAGES.map((lang) => (
@@ -46,8 +46,8 @@ const Header = () => {
           <button className="py-2 px-4 m-2 text-white bg-purple-800 rounded-md" onClick={handleSearchClick}>
             {isGptSearchVisible ? "Home Page" : "GPT Search"}
           </button>
-          <span className="font-bold text-white text-2xl">Welcome! {user?.displayName?.toUpperCase()}</span>
-          <img className="w-10 h-10 mx-2 rounded-sm" src={USER_ICON} alt="user icon" />
+          <span className="hidden md:block font-bold text-white text-2xl">Welcome! {user?.displayName?.toUpperCase()}</span>
+          <img className="hidden md:block w-10 h-10 mx-2 rounded-sm" src={USER_ICON} alt="user icon" />
           <button className="font-bold text-white border p-2 rounded-md bg-slate-400 hover:bg-slate-500" onClick={handleSignOut}>
             Sign Out
           </button>
